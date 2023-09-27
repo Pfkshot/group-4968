@@ -26,3 +26,23 @@ void PrintResult(string msg)
 {
       Console.WriteLine(msg);
 }
+
+//ищем min и max значения
+int Dif(int[] arr)
+{
+      int min = arr[0];
+      int max = arr[0];
+
+      for (int i = 0; i < arr.Length; i++)
+      {
+            if (arr[i] < min) min = arr[i];
+            if (arr[i] > max) max = arr[i];
+      }
+
+      return max - min;
+}
+
+int[] arr = GenArray(10, 0, 100);
+PrintArray(arr);
+int Diff = Dif(arr);
+PrintResult("Разницу между максимальным и минимальным элементами массива = " + Diff);
