@@ -28,8 +28,13 @@ int Sum(int m, int n)
       }
 }
 
+void SumNatural(int m, int n)
+{
+      Console.Write(Sum(m - 1, n));
+}
+
 //Решение
 int m = ReadData("Введите число m "); ;
 int n = ReadData("Введите число n ");
 PrintResult("Сумма натуральных чисел равна  ");
-Sum(m, n);
+SumNatural(m, n);
